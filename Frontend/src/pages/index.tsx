@@ -30,7 +30,7 @@ export default function Home({ userData }: any) {
       <div className='relative h-lvh flex '>
         <Image src='/bg.jpg' fill={true} alt='bg' className=' hidden lg:flex z-[-2000] fixed opacity-10 overflow-visible' />
         <section
-          className='flex flex-1 justify-center items-center mt-16 bg-[#FFFBE6]'>
+          className='flex flex-1 justify-center items-center mt-16 bg-[#F5F5F7] '>
           <Hero />
         </section>
       </div>
