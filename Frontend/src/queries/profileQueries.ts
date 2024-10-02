@@ -43,8 +43,8 @@ export const useRegisterUserMutation = () => {
     return useMutation({
         mutationKey: ['register-user'],
         mutationFn: async (userData: { fullName: string, userName: string, email: string, password: string }) => {
-            console.log('trying it')
-            const response = await axios.post(`${process.env.NEXT_PUBLIC_PROD_URL}/v1/users/register`, userData)
+            console.log('trying it',process.env.NEXT_PUBLIC_PROD_URL)
+            const response = await axios.post(`${process.env.NEXT_PUBLIC_PROD_URL}/users/register`, userData)
             return response.data
         }
     })
