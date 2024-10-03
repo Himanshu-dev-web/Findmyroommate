@@ -8,9 +8,10 @@ const app = express();
 // define some middlewares
 
 const allowedOrigins = [
-    "http://localhost:3000",
- 
-    "https://findmyroommate.vercel.app/"
+    process.env.NEXT_PUBLIC_PROD_URL,
+    process.env.NEXT_PUBLIC_BASE_URL,
+    
+    // 'http://localhost:3000' // for development mode in Next.js
 ]
 
 const corsOptions = {
@@ -38,6 +39,7 @@ app.use(express.urlencoded({
 app.use(cookieParser())
 
 app.get('/', (req, res) => {
+    console.log("yelo", process.env.NEXT_PUBLIC_PROD_URL,process.env.NEXT_PUBLIC_BASE_URL)
     res.send('Hello, this is the home page!');
 });
 

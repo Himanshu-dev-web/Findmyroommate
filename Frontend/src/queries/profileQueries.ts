@@ -44,7 +44,7 @@ export const useRegisterUserMutation = () => {
         mutationKey: ['register-user'],
         mutationFn: async (userData: { fullName: string, userName: string, email: string, password: string }) => {
             console.log('trying it',process.env.NEXT_PUBLIC_PROD_URL)
-            const response = await axios.post(`${process.env.NEXT_PUBLIC_PROD_URL}/users/register`, userData)
+            const response = await axios.post(`${process.env.NEXT_PUBLIC_PROD_URL}/api/v1/users/register`, userData)
             return response.data
         }
     })
@@ -55,7 +55,7 @@ export const useLoginUserQuery = () => {
     return useMutation({
         mutationKey: ['login-user'],
         mutationFn: async (userLoginData: LoginUserData) => {
-            const response = await axios.post(`${process.env.NEXT_PUBLIC_PROD_URL}/users/login`, userLoginData)
+            const response = await axios.post(`${process.env.NEXT_PUBLIC_PROD_URL}/api/v1/users/login`, userLoginData)
             //console.log('login form',response);
 
             return response.data
@@ -87,7 +87,7 @@ export const useAuthenticateUserQuery = () => {
             }
             formData.append('preferences', JSON.stringify(userData.preferences));
 
-            const response = await axios.post(`${process.env.NEXT_PUBLIC_PROD_URL}/users/authenticate`, formData, {
+            const response = await axios.post(`${process.env.NEXT_PUBLIC_PROD_URL}/api/v1/users/authenticate`, formData, {
                 headers: {
                     'Authorization': `Bearer ${accessToken}`,
                     'Content-Type': 'multipart/form-data',
@@ -106,7 +106,7 @@ export const useGetUserDataQuery = () => {
     return useMutation({
         mutationKey: ['get-user-data'],
         mutationFn: async () => {
-            const response = await axios.get(`${process.env.NEXT_PUBLIC_PROD_URL}/users/get-user-data`, {
+            const response = await axios.get(`${process.env.NEXT_PUBLIC_PROD_URL}/api/v1/users/get-user-data`, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
                 }
@@ -121,7 +121,7 @@ export const useUpdateUserDataQuery = () => {
     return useMutation({
         mutationKey: ['update-user-data'],
         mutationFn: async (userData: updateUserData) => {
-            const response = await axios.put(`${process.env.NEXT_PUBLIC_PROD_URL}/users/update-user-data`, userData, {
+            const response = await axios.put(`${process.env.NEXT_PUBLIC_PROD_URL}/api/v1/users/update-user-data`, userData, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
                 }
@@ -135,7 +135,7 @@ export const useGetMyListingasQuery = () => {
     return useQuery({
         queryKey: ['get-my-listings'],
         queryFn: async () => {
-            const response = await axios.get(`${process.env.NEXT_PUBLIC_PROD_URL}/listings/getUserListings`, {
+            const response = await axios.get(`${process.env.NEXT_PUBLIC_PROD_URL}/api/v1/listings/getUserListings`, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
                 }
