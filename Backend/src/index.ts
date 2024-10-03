@@ -6,6 +6,7 @@ import connectDB from "./db";
 dotenv.config({
   path: './env'
 })
+
 const port = 8000;
 
 connectDB()

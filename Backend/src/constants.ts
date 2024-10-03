@@ -1,1 +1,1 @@
-export const DB_NAME : string = 'find-roomie';
+export const DB_NAME : string = '';
