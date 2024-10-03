@@ -180,7 +180,7 @@ export function RegisterForm() {
         >
           {/* <Image width={32} height={32} src="/findroomieIcon.webp" className="h-8" alt="Flowbite Logo" priority /> */}
           <span className="self-center text-2xl font-lemon  whitespace-nowrap dark:text-white ">
-            findroomie
+          Findmyroommate
           </span>
         </Link>
       </div>

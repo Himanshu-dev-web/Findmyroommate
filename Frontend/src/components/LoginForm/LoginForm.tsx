@@ -155,7 +155,7 @@ export function LoginForm() {
                 <div className='flex justify-center items-center mb-8'>
                     <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                         {/* <Image width={32} height={32} src="/findroomieIcon.webp" className="h-8" alt="Flowbite Logo" priority /> */}
-                        <span className="self-center text-2xl font-lemon  whitespace-nowrap dark:text-white ">findroomie</span>
+                        <span className="self-center text-2xl font-lemon  whitespace-nowrap dark:text-white ">Findmyroommate</span>
                     </Link>
                 </div>
                 <Form {...form}>
