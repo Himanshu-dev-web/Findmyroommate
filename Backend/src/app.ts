@@ -11,7 +11,7 @@ const allowedOrigins = [
     process.env.NEXT_PUBLIC_PROD_URL,
     process.env.NEXT_PUBLIC_BASE_URL,
     
-    // 'http://localhost:3000' // for development mode in Next.js
+     'http://localhost:3000' // for development mode in Next.js
 ]
 
 const corsOptions = {
