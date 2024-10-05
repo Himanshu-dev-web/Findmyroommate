@@ -5,11 +5,11 @@ import { Listing } from "../models/listing.model";
 const connectDB = async () => {
     try {
         console.log("undefined",process.env.MONGO_URI);
-        // if (!process.env.MONGO_URI) {
-        //     throw new Error('MONGO_URI is not defined in the environment variables');
-        // }
+        if (!process.env.MONGO_URI) {
+            throw new Error('MONGO_URI is not defined in the environment variables');
+        }
 
-        const connectionInstance = await mongoose.connect("mongodb+srv://hims:YFnSMhxvrMbWMOzm@cluster0.nghvgcd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+        const connectionInstance = await mongoose.connect(process.env.MONGO_URI , {
             dbName: DB_NAME
         });
         

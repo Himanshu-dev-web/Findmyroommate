@@ -95,7 +95,7 @@ const Header: React.FunctionComponent<any> = ({ userName, email, avatar, isUserA
           >
             <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
               <Image width={32} height={32} src="/bedtime.png" className="h-8" alt="Flowbite Logo" priority />
-              <span className="self-center text-xl    whitespace-nowrap dark:text-white ">Findmyroommate</span>
+              <span className="self-center text-xl    whitespace-nowrap dark:text-white ">ShareSpace</span>
             </Link>
           </Stack>
           <NavItems />

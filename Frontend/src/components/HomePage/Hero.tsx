@@ -77,7 +77,7 @@ function Hero() {
     const encodedLocation = encodeURIComponent(location);
 
     const geoCodedDataResponse = await fetch(
-      `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedLocation}&key=${googleMapsAPIKey}`
+      `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedLocation}&key=jolones`
     );
     const geoData = await geoCodedDataResponse.json();
 
